@@ -1,13 +1,13 @@
 <?php
 
-	/**
-	* Sourcerer Contracts
-	* SingletonTrait
-	*
-	* @author        Sidney Tougeiro
-	* @copyright     Copyright(c) 2020, sidneytougeiro.com
-	* @license       MIT
-	*/
+    /**
+    * Sourcerer Contracts
+    * SingletonTrait
+    *
+    * @author        Sidney Tougeiro
+    * @copyright     Copyright(c) 2020, sidneytougeiro.com
+    * @license       MIT
+    */
 
     namespace Sourcerer\Contracts;
 
@@ -31,5 +31,3 @@
             return self::$instance;
         }
     }
-
-?>
