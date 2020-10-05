@@ -1,0 +1,28 @@
+{
+    "name": "stougeiro/sourcerer-contracts",
+    "type": "library",
+    "description": "Provides a simple contracts for PHP applications classes.",
+    "keywords": ["php","simple","custom","contract"],
+    "homepage": "https://github.com/stougeiro/sourcerer-contracts",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Sidney Tougeiro",
+            "email": "atendimento@sidneytougeiro.com",
+            "homepage": "http://www.sidneytougeiro.com/"
+        }
+    ],
+    "support": {
+        "email": "atendimento@sidneytougeiro.com"
+    },
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.5.20"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}
