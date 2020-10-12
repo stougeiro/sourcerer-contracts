@@ -1,8 +1,8 @@
 {
     "name": "stougeiro/sourcerer-contracts",
     "type": "library",
-    "description": "Provides a simple contracts for PHP applications classes.",
-    "keywords": ["php","simple","custom","contracts","php","applications"],
+    "description": "Provides simple and usefull contracts for PHP applications classes.",
+    "keywords": ["php","simple","contracts","php","applications"],
     "homepage": "https://github.com/stougeiro/sourcerer-contracts",
     "license": "MIT",
     "minimum-stability": "stable",
