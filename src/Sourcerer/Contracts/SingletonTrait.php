@@ -14,16 +14,14 @@
 
     trait SingletonTrait
     {
-        private function __construct() {
-        }
-        private function __clone() {
-        }
-        private function __wakeup() {
-        }
-
         private static $instance;
 
-        public static function getInstance() {
+        private function __construct() { }
+        private function __clone() { }
+        private function __wakeup() { }
+
+        public static function getInstance()
+        {
             if ( ! self::$instance instanceof self) {
                 self::$instance = new self();
             }

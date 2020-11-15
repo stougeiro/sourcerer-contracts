@@ -14,7 +14,8 @@
 
     final class SingletonTraitTest extends TestCase
     {
-        public function testIsInstanceOf(): void {
+        public function testIsInstanceOf(): void
+        {
             global
                 $guineapig,
                 $bait;
@@ -35,7 +36,8 @@
             );
         }
 
-        public function testIsObject(): void {
+        public function testIsObject(): void
+        {
             global
                 $guineapig,
                 $bait;
@@ -44,7 +46,8 @@
             $this->assertIsObject($bait);
         }
 
-        public function testSame(): void {
+        public function testSame(): void
+        {
             global
                 $guineapig,
                 $bait;
@@ -60,7 +63,8 @@
             );
         }
 
-        public function testEquals(): void {
+        public function testEquals(): void
+        {
             global
                 $guineapig,
                 $bait;
@@ -81,7 +85,8 @@
             );
         }
 
-        public function testContainsOnlyInstancesOf(): void {
+        public function testContainsOnlyInstancesOf(): void
+        {
             global
                 $guineapig,
                 $bait;
