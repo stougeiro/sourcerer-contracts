@@ -8,18 +8,19 @@
         use SingletonTrait;
     }
 
-    $guineapig = GuineaPig::getInstance();
-    $bait = GuineaPig::getInstance();
-
-
     final class SingletonTraitTest extends TestCase
     {
+        public $guineapig;
+        public $bait;
+
+        public function setUp()
+        {
+            $this->guineapig = GuineaPig::getInstance();
+            $this->bait = GuineaPig::getInstance();
+        }
+
         public function testIsInstanceOf(): void
         {
-            global
-                $guineapig,
-                $bait;
-
             $this->assertInstanceOf(
                 GuineaPig::class,
                 GuineaPig::getInstance()
@@ -27,73 +28,57 @@
 
             $this->assertInstanceOf(
                 GuineaPig::class,
-                $guineapig
+                $this->guineapig
             );
 
             $this->assertInstanceOf(
                 GuineaPig::class,
-                $bait
+                $this->bait
             );
         }
 
         public function testIsObject(): void
         {
-            global
-                $guineapig,
-                $bait;
-
-            $this->assertIsObject($guineapig);
-            $this->assertIsObject($bait);
+            $this->assertIsObject($this->guineapig);
+            $this->assertIsObject($this->bait);
         }
 
         public function testSame(): void
         {
-            global
-                $guineapig,
-                $bait;
-
             $this->assertSame(
                 GuineaPig::getInstance(),
-                $guineapig
+                $this->guineapig
             );
 
             $this->assertSame(
                 GuineaPig::getInstance(),
-                $bait
+                $this->bait
             );
         }
 
         public function testEquals(): void
         {
-            global
-                $guineapig,
-                $bait;
-
             $this->assertEquals(
                 GuineaPig::getInstance(),
-                $guineapig
+                $this->guineapig
             );
 
             $this->assertEquals(
                 GuineaPig::getInstance(),
-                $bait
+                $this->bait
             );
 
             $this->assertEquals(
-                $guineapig,
-                $bait
+                $this->guineapig,
+                $this->bait
             );
         }
 
         public function testContainsOnlyInstancesOf(): void
         {
-            global
-                $guineapig,
-                $bait;
-
             $this->assertContainsOnlyInstancesOf(
                 GuineaPig::class,
-                [GuineaPig::getInstance(), $guineapig, $bait]
+                [GuineaPig::getInstance(), $this->guineapig, $this->bait]
             );
         }
     }
